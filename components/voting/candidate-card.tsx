@@ -13,9 +13,10 @@ interface CandidateCardProps {
   candidate: Candidate
   showVotes?: boolean
   onVote?: (candidateId: string) => void
+  categoryName?: string
 }
 
-export function CandidateCard({ candidate, showVotes = false, onVote }: CandidateCardProps) {
+export function CandidateCard({ candidate, showVotes = false, onVote, categoryName }: CandidateCardProps) {
   const [isVoting, setIsVoting] = useState(false)
   const [hasVoted, setHasVoted] = useState(false)
   const { toast } = useToast()
@@ -57,8 +58,8 @@ export function CandidateCard({ candidate, showVotes = false, onVote }: Candidat
         </div>
         <h3 className="font-semibold text-lg">{candidate.name}</h3>
         <div className="flex items-center gap-2 mt-1">
-          <Badge variant="outline">{candidate.position}</Badge>
-          <Badge variant="secondary">{candidate.party}</Badge>
+          <Badge variant="outline">{categoryName || `Category ${candidate.category}`}</Badge>
+          <Badge variant="secondary">{candidate.description}</Badge>
         </div>
       </CardHeader>
       <CardContent className="flex-grow">
@@ -90,4 +91,3 @@ export function CandidateCard({ candidate, showVotes = false, onVote }: Candidat
     </Card>
   )
 }
-

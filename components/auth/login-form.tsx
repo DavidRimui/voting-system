@@ -8,11 +8,11 @@ import { useAuth } from "@/lib/auth-context"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { AlertCircle } from "lucide-react"
 
-export function LoginForm({ isAdmin = false }: { isAdmin?: boolean }) {
+export function LoginForm() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState<string | null>(null)
@@ -51,9 +51,9 @@ export function LoginForm({ isAdmin = false }: { isAdmin?: boolean }) {
     setIsSubmitting(true)
 
     try {
-      const success = await login(email, password, isAdmin)
+      const success = await login(email, password)
       if (success) {
-        router.push(isAdmin ? "/admin/dashboard" : "/voting")
+        router.push("/admin/dashboard")
       } else {
         setError("Invalid email or password")
       }
@@ -68,10 +68,8 @@ export function LoginForm({ isAdmin = false }: { isAdmin?: boolean }) {
   return (
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>
-        <CardTitle>{isAdmin ? "Admin Login" : "Login"}</CardTitle>
-        <CardDescription>
-          {isAdmin ? "Sign in to access the admin dashboard" : "Sign in to start voting for your favorite candidates"}
-        </CardDescription>
+        <CardTitle>Admin Login</CardTitle>
+        <CardDescription>Sign in to access the admin dashboard</CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -89,7 +87,7 @@ export function LoginForm({ isAdmin = false }: { isAdmin?: boolean }) {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="john@example.com"
+              placeholder="admin@example.com"
               disabled={isSubmitting}
             />
           </div>
@@ -111,17 +109,6 @@ export function LoginForm({ isAdmin = false }: { isAdmin?: boolean }) {
           </Button>
         </form>
       </CardContent>
-      {!isAdmin && (
-        <CardFooter className="flex justify-center">
-          <p className="text-sm text-muted-foreground">
-            Don't have an account?{" "}
-            <Button variant="link" className="p-0" onClick={() => router.push("/signup")}>
-              Sign up
-            </Button>
-          </p>
-        </CardFooter>
-      )}
     </Card>
   )
 }
-

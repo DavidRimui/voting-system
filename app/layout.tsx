@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Voting System",
-  description: "A Next.js voting system with user and admin functionality",
+  description: "A Next.js voting system with admin functionality",
     generator: 'v0.dev'
 }
 
@@ -31,7 +31,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-
-import './globals.css'

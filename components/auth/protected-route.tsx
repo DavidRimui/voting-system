@@ -3,29 +3,22 @@
 import type React from "react"
 
 import { useAuth } from "@/lib/auth-context"
-import { useRouter, usePathname } from "next/navigation"
+import { useRouter } from "next/navigation"
 import { useEffect } from "react"
 
 export function ProtectedRoute({
   children,
-  adminOnly = false,
 }: {
   children: React.ReactNode
-  adminOnly?: boolean
 }) {
-  const { user, isLoading } = useAuth()
+  const { admin, isLoading } = useAuth()
   const router = useRouter()
-  const pathname = usePathname()
 
   useEffect(() => {
-    if (!isLoading) {
-      if (!user) {
-        router.push("/login")
-      } else if (adminOnly && !user.isAdmin) {
-        router.push("/voting")
-      }
+    if (!isLoading && !admin) {
+      router.push("/admin/login")
     }
-  }, [user, isLoading, router, adminOnly])
+  }, [admin, isLoading, router])
 
   // Show loading state
   if (isLoading) {
@@ -36,11 +29,10 @@ export function ProtectedRoute({
     )
   }
 
-  // If not authenticated or not admin when required, don't render children
-  if (!user || (adminOnly && !user.isAdmin)) {
+  // If not authenticated, don't render children
+  if (!admin) {
     return null
   }
 
   return <>{children}</>
 }
-

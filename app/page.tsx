@@ -10,19 +10,12 @@ export default function Home() {
           <Vote className="h-16 w-16 text-primary" />
         </div>
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">Welcome to the Voting System</h1>
-        <p className="mt-6 text-xl text-muted-foreground">
-          A secure and transparent platform for casting your vote. Sign up or log in to get started.
-        </p>
+        <p className="mt-6 text-xl text-muted-foreground">A secure and transparent platform for casting your vote.</p>
         <div className="flex flex-col sm:flex-row gap-4 mt-10 justify-center">
           <Button asChild size="lg">
-            <Link href="/signup">Sign Up</Link>
+            <Link href="/voting">Vote Now</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <Link href="/login">Log In</Link>
-          </Button>
-        </div>
-        <div className="mt-6">
-          <Button asChild variant="link">
             <Link href="/admin/login">Admin Login</Link>
           </Button>
         </div>
@@ -30,4 +23,3 @@ export default function Home() {
     </div>
   )
 }
-

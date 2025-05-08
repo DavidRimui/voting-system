@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { getCandidates, type Candidate } from "@/lib/data"
+import { getCandidates, type Candidate, categories } from "@/lib/data"
 import { CandidateCard } from "@/components/voting/candidate-card"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -12,14 +12,8 @@ export function VotingPlatform() {
   const [candidates, setCandidates] = useState<Candidate[]>([])
   const [filteredCandidates, setFilteredCandidates] = useState<Candidate[]>([])
   const [searchTerm, setSearchTerm] = useState("")
-  const [positionFilter, setPositionFilter] = useState("all")
-  const [partyFilter, setPartyFilter] = useState("all")
+  const [categoryFilter, setCategoryFilter] = useState("all")
   const [isLoading, setIsLoading] = useState(true)
-
-  // Get unique positions and parties for filters
-  const positions = candidates.length > 0 ? ["all", ...Array.from(new Set(candidates.map((c) => c.position)))] : ["all"]
-
-  const parties = candidates.length > 0 ? ["all", ...Array.from(new Set(candidates.map((c) => c.party)))] : ["all"]
 
   useEffect(() => {
     // Simulate loading data
@@ -40,20 +34,21 @@ export function VotingPlatform() {
       filtered = filtered.filter((c) => c.name.toLowerCase().includes(searchTerm.toLowerCase()))
     }
 
-    if (positionFilter !== "all") {
-      filtered = filtered.filter((c) => c.position === positionFilter)
-    }
-
-    if (partyFilter !== "all") {
-      filtered = filtered.filter((c) => c.party === partyFilter)
+    if (categoryFilter !== "all") {
+      filtered = filtered.filter((c) => c.category === categoryFilter)
     }
 
     setFilteredCandidates(filtered)
-  }, [searchTerm, positionFilter, partyFilter, candidates])
+  }, [searchTerm, categoryFilter, candidates])
 
   const handleVote = (candidateId: string) => {
     // Update local state to reflect vote
     setCandidates((prev) => prev.map((c) => (c.id === candidateId ? { ...c, votes: c.votes + 1 } : c)))
+  }
+
+  const getCategoryName = (categoryId: string) => {
+    const category = categories.find((c) => c.id === categoryId)
+    return category ? category.name : `Category ${categoryId}`
   }
 
   if (isLoading) {
@@ -68,7 +63,7 @@ export function VotingPlatform() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">Vote for Your Candidate</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <div className="relative">
           <Label htmlFor="search" className="mb-2 block">
             Search Candidates
@@ -86,35 +81,18 @@ export function VotingPlatform() {
         </div>
 
         <div>
-          <Label htmlFor="position" className="mb-2 block">
-            Filter by Position
+          <Label htmlFor="category" className="mb-2 block">
+            Filter by Category
           </Label>
-          <Select value={positionFilter} onValueChange={setPositionFilter}>
-            <SelectTrigger id="position">
-              <SelectValue placeholder="Select position" />
+          <Select value={categoryFilter} onValueChange={setCategoryFilter}>
+            <SelectTrigger id="category">
+              <SelectValue placeholder="Select category" />
             </SelectTrigger>
             <SelectContent>
-              {positions.map((position) => (
-                <SelectItem key={position} value={position}>
-                  {position === "all" ? "All Positions" : position}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div>
-          <Label htmlFor="party" className="mb-2 block">
-            Filter by Party
-          </Label>
-          <Select value={partyFilter} onValueChange={setPartyFilter}>
-            <SelectTrigger id="party">
-              <SelectValue placeholder="Select party" />
-            </SelectTrigger>
-            <SelectContent>
-              {parties.map((party) => (
-                <SelectItem key={party} value={party}>
-                  {party === "all" ? "All Parties" : party}
+              <SelectItem value="all">All Categories</SelectItem>
+              {categories.map((category) => (
+                <SelectItem key={category.id} value={category.id}>
+                  {category.name}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -130,11 +108,15 @@ export function VotingPlatform() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredCandidates.map((candidate) => (
-            <CandidateCard key={candidate.id} candidate={candidate} onVote={handleVote} />
+            <CandidateCard
+              key={candidate.id}
+              candidate={candidate}
+              onVote={handleVote}
+              categoryName={getCategoryName(candidate.category)}
+            />
           ))}
         </div>
       )}
     </div>
   )
 }
-
