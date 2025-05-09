@@ -53,19 +53,19 @@ export function CandidateCard({ candidate, showVotes = false, onVote, categoryNa
   return (
     <Card className="h-full flex flex-col">
       <CardHeader className="pb-2">
-        <div className="relative w-full aspect-square mb-2 bg-muted rounded-md overflow-hidden">
+        <div className="relative w-32 h-32 mx-auto mb-2 rounded-full overflow-hidden border-4 border-primary/20">
           <Image src={candidate.imageUrl || "/placeholder.svg"} alt={candidate.name} fill className="object-cover" />
         </div>
-        <h3 className="font-semibold text-lg">{candidate.name}</h3>
-        <div className="flex items-center gap-2 mt-1">
+        <h3 className="font-semibold text-lg text-center">{candidate.name}</h3>
+        <div className="flex flex-wrap items-center justify-center gap-2 mt-1">
           <Badge variant="outline">{categoryName || `Category ${candidate.category}`}</Badge>
           <Badge variant="secondary">{candidate.description}</Badge>
         </div>
       </CardHeader>
-      <CardContent className="flex-grow">
+      <CardContent className="flex-grow text-center">
         {showVotes && (
-          <p className="text-sm text-muted-foreground">
-            Current votes: <span className="font-semibold">{candidate.votes}</span>
+          <p className="text-sm">
+            Current votes: <span className="font-semibold text-primary">{candidate.votes}</span>
           </p>
         )}
       </CardContent>

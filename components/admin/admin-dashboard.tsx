@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { getCandidates, type Candidate, categories } from "@/lib/data"
+import { type Candidate, categories } from "@/lib/data"
 import { CandidateCard } from "@/components/voting/candidate-card"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -10,30 +10,18 @@ import { Search, BarChart2, Users, Award } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { useRealTimeVotes } from "@/lib/vote-service"
 
 export function AdminDashboard() {
-  const [candidates, setCandidates] = useState<Candidate[]>([])
+  const { candidates, isLoading } = useRealTimeVotes()
   const [filteredCandidates, setFilteredCandidates] = useState<Candidate[]>([])
   const [searchTerm, setSearchTerm] = useState("")
   const [categoryFilter, setCategoryFilter] = useState("all")
-  const [isLoading, setIsLoading] = useState(true)
-  const [refreshTrigger, setRefreshTrigger] = useState(0)
 
   // Stats
   const totalVotes = candidates.reduce((sum, candidate) => sum + candidate.votes, 0)
   const topCandidate =
     candidates.length > 0 ? candidates.reduce((prev, current) => (prev.votes > current.votes ? prev : current)) : null
-
-  useEffect(() => {
-    // Load candidates data
-    setIsLoading(true)
-    setTimeout(() => {
-      const allCandidates = getCandidates()
-      setCandidates(allCandidates)
-      setFilteredCandidates(allCandidates)
-      setIsLoading(false)
-    }, 1000)
-  }, [refreshTrigger])
 
   useEffect(() => {
     // Apply filters
@@ -49,10 +37,6 @@ export function AdminDashboard() {
 
     setFilteredCandidates(filtered)
   }, [searchTerm, categoryFilter, candidates])
-
-  const refreshData = () => {
-    setRefreshTrigger((prev) => prev + 1)
-  }
 
   const getCategoryName = (categoryId: string) => {
     const category = categories.find((c) => c.id === categoryId)

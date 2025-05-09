@@ -1,30 +1,19 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { getCandidates, type Candidate, categories } from "@/lib/data"
+import { type Candidate, categories } from "@/lib/data"
 import { CandidateCard } from "@/components/voting/candidate-card"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Label } from "@/components/ui/label"
 import { Search } from "lucide-react"
+import { useRealTimeVotes } from "@/lib/vote-service"
 
 export function VotingPlatform() {
-  const [candidates, setCandidates] = useState<Candidate[]>([])
+  const { candidates, isLoading } = useRealTimeVotes()
   const [filteredCandidates, setFilteredCandidates] = useState<Candidate[]>([])
   const [searchTerm, setSearchTerm] = useState("")
   const [categoryFilter, setCategoryFilter] = useState("all")
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    // Simulate loading data
-    setIsLoading(true)
-    setTimeout(() => {
-      const allCandidates = getCandidates()
-      setCandidates(allCandidates)
-      setFilteredCandidates(allCandidates)
-      setIsLoading(false)
-    }, 1000)
-  }, [])
 
   useEffect(() => {
     // Apply filters
@@ -42,8 +31,8 @@ export function VotingPlatform() {
   }, [searchTerm, categoryFilter, candidates])
 
   const handleVote = (candidateId: string) => {
-    // Update local state to reflect vote
-    setCandidates((prev) => prev.map((c) => (c.id === candidateId ? { ...c, votes: c.votes + 1 } : c)))
+    // The vote is already handled in the CandidateCard component
+    // and the real-time updates will pick up the change
   }
 
   const getCategoryName = (categoryId: string) => {

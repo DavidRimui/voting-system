@@ -70,7 +70,7 @@ export function generateCandidates(): Candidate[] {
       category: "1",
       description: "Media Personality",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=AO`,
+      imageUrl: `/images/adele-onyango.png`,
     },
     {
       id: "1-5",
@@ -112,7 +112,7 @@ export function generateCandidates(): Candidate[] {
       category: "2",
       description: "Social Media Influencer",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=AG`,
+      imageUrl: `/images/ajib-gathoni.png`,
     },
     {
       id: "2-2",
@@ -352,7 +352,7 @@ export function generateCandidates(): Candidate[] {
       category: "6",
       description: "Global Nursing Award",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=AQ`,
+      imageUrl: `/images/anne-qabale-duba.png`,
     },
     {
       id: "6-3",
@@ -428,7 +428,7 @@ export function generateCandidates(): Candidate[] {
       category: "8",
       description: "Youth & Innovation Leader",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=AO`,
+      imageUrl: `/images/angela-oduor-langat.png`,
     },
     {
       id: "8-4",
@@ -462,7 +462,7 @@ export function generateCandidates(): Candidate[] {
       category: "9",
       description: "CEO of FIDA",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=AI`,
+      imageUrl: `/images/anne-ireri.png`,
     },
     {
       id: "9-2",
@@ -504,7 +504,7 @@ export function generateCandidates(): Candidate[] {
       category: "10",
       description: "NACADA",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=AM`,
+      imageUrl: `/images/ann-mathu.png`,
     },
     {
       id: "10-4",
@@ -624,7 +624,7 @@ export function generateCandidates(): Candidate[] {
       category: "14",
       description: "Tennis",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=AO`,
+      imageUrl: `/images/angela-otukoyi.png`,
     },
     {
       id: "14-3",
@@ -640,7 +640,7 @@ export function generateCandidates(): Candidate[] {
       category: "14",
       description: "Fencing",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=AN`,
+      imageUrl: `/images/alexandra-ndolo.png`,
     },
     {
       id: "14-5",
@@ -800,7 +800,7 @@ export function generateCandidates(): Candidate[] {
       category: "18",
       description: "Entertainment & Creative Arts Professional",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=AN`,
+      imageUrl: `/images/angela-ndambuki.png`,
     },
     {
       id: "18-6",
