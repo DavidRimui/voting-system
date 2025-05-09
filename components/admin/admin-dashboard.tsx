@@ -6,11 +6,13 @@ import { CandidateCard } from "@/components/voting/candidate-card"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Label } from "@/components/ui/label"
-import { Search, BarChart2, Users, Award } from "lucide-react"
+import { Search, BarChart2, Users, Award, DollarSign } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { useRealTimeVotes } from "@/lib/vote-service"
+
+const VOTE_PRICE = 10 // KES per vote
 
 export function AdminDashboard() {
   const { candidates, isLoading } = useRealTimeVotes()
@@ -20,6 +22,7 @@ export function AdminDashboard() {
 
   // Stats
   const totalVotes = candidates.reduce((sum, candidate) => sum + candidate.votes, 0)
+  const totalRevenue = totalVotes * VOTE_PRICE
   const topCandidate =
     candidates.length > 0 ? candidates.reduce((prev, current) => (prev.votes > current.votes ? prev : current)) : null
 
@@ -55,7 +58,7 @@ export function AdminDashboard() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">Admin Dashboard</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Votes</CardTitle>
@@ -63,6 +66,17 @@ export function AdminDashboard() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{totalVotes}</div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
+            <DollarSign className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{totalRevenue.toLocaleString()} KES</div>
+            <p className="text-xs text-muted-foreground">At {VOTE_PRICE} KES per vote</p>
           </CardContent>
         </Card>
 
@@ -143,6 +157,7 @@ export function AdminDashboard() {
                   <TableHead>Category</TableHead>
                   <TableHead>Description</TableHead>
                   <TableHead className="text-right">Votes</TableHead>
+                  <TableHead className="text-right">Revenue (KES)</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -153,6 +168,7 @@ export function AdminDashboard() {
                     <TableCell>{getCategoryName(candidate.category)}</TableCell>
                     <TableCell>{candidate.description}</TableCell>
                     <TableCell className="text-right">{candidate.votes}</TableCell>
+                    <TableCell className="text-right">{(candidate.votes * VOTE_PRICE).toLocaleString()}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>

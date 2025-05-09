@@ -7,18 +7,21 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { type Candidate, voteForCandidate } from "@/lib/data"
 import { useToast } from "@/components/ui/use-toast"
-import { Check } from "lucide-react"
+import { Check, Minus, Plus } from "lucide-react"
 
 interface CandidateCardProps {
   candidate: Candidate
   showVotes?: boolean
-  onVote?: (candidateId: string) => void
+  onVote?: (candidateId: string, voteCount: number) => void
   categoryName?: string
 }
+
+const VOTE_PRICE = 10 // KES per vote
 
 export function CandidateCard({ candidate, showVotes = false, onVote, categoryName }: CandidateCardProps) {
   const [isVoting, setIsVoting] = useState(false)
   const [hasVoted, setHasVoted] = useState(false)
+  const [voteCount, setVoteCount] = useState(1)
   const { toast } = useToast()
 
   const handleVote = () => {
@@ -26,28 +29,45 @@ export function CandidateCard({ candidate, showVotes = false, onVote, categoryNa
 
     // Simulate API call
     setTimeout(() => {
-      const success = voteForCandidate(candidate.id)
+      let success = true
+
+      // Apply multiple votes
+      for (let i = 0; i < voteCount; i++) {
+        const voteSuccess = voteForCandidate(candidate.id)
+        if (!voteSuccess) {
+          success = false
+          break
+        }
+      }
 
       if (success) {
         setHasVoted(true)
         toast({
-          title: "Vote Recorded",
-          description: `You have successfully voted for ${candidate.name}`,
+          title: "Votes Recorded",
+          description: `You have successfully voted for ${candidate.name} with ${voteCount} vote${voteCount > 1 ? "s" : ""}`,
         })
 
         if (onVote) {
-          onVote(candidate.id)
+          onVote(candidate.id, voteCount)
         }
       } else {
         toast({
           title: "Error",
-          description: "Failed to record your vote. Please try again.",
+          description: "Failed to record your votes. Please try again.",
           variant: "destructive",
         })
       }
 
       setIsVoting(false)
     }, 1000)
+  }
+
+  const incrementVotes = () => {
+    setVoteCount((prev) => prev + 1)
+  }
+
+  const decrementVotes = () => {
+    setVoteCount((prev) => (prev > 1 ? prev - 1 : 1))
   }
 
   return (
@@ -64,29 +84,66 @@ export function CandidateCard({ candidate, showVotes = false, onVote, categoryNa
       </CardHeader>
       <CardContent className="flex-grow text-center">
         <p className="text-sm text-muted-foreground">{candidate.description}</p>
+        {showVotes && (
+          <p className="text-sm mt-2">
+            Current votes: <span className="font-semibold text-primary">{candidate.votes}</span>
+          </p>
+        )}
       </CardContent>
       <CardFooter className="flex flex-col gap-2">
-        <div className="w-full text-center mb-1">
-          <span className="text-sm font-medium">
-            Votes: <span className="text-primary font-bold">{candidate.votes}</span>
-          </span>
-        </div>
-        {!showVotes && (
-          <Button className="w-full" onClick={handleVote} disabled={isVoting || hasVoted}>
-            {isVoting ? (
-              <span className="flex items-center gap-2">
-                <span className="animate-spin rounded-full h-4 w-4 border-t-2 border-b-2 border-background"></span>
-                Voting...
-              </span>
-            ) : hasVoted ? (
-              <span className="flex items-center gap-2">
-                <Check className="h-4 w-4" />
-                Voted
-              </span>
-            ) : (
-              "Vote"
-            )}
-          </Button>
+        {!showVotes && !hasVoted && (
+          <>
+            <div className="w-full flex items-center justify-between mb-2">
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="h-8 w-8"
+                  onClick={decrementVotes}
+                  disabled={voteCount <= 1 || isVoting}
+                >
+                  <Minus className="h-4 w-4" />
+                </Button>
+                <span className="font-medium text-lg w-8 text-center">{voteCount}</span>
+                <Button variant="outline" size="icon" className="h-8 w-8" onClick={incrementVotes} disabled={isVoting}>
+                  <Plus className="h-4 w-4" />
+                </Button>
+              </div>
+              <div className="text-sm font-medium">
+                Total: <span className="text-primary">{voteCount * VOTE_PRICE} KES</span>
+              </div>
+            </div>
+            <Button className="w-full" onClick={handleVote} disabled={isVoting}>
+              {isVoting ? (
+                <span className="flex items-center gap-2">
+                  <span className="animate-spin rounded-full h-4 w-4 border-t-2 border-b-2 border-background"></span>
+                  Processing...
+                </span>
+              ) : (
+                `Vote Now (${voteCount * VOTE_PRICE} KES)`
+              )}
+            </Button>
+          </>
+        )}
+
+        {!showVotes && hasVoted && (
+          <div className="w-full text-center">
+            <div className="flex items-center justify-center gap-2 text-primary">
+              <Check className="h-5 w-5" />
+              <span className="font-medium">Voted Successfully</span>
+            </div>
+            <p className="text-sm text-muted-foreground mt-1">
+              Thank you for your {voteCount} vote{voteCount > 1 ? "s" : ""}!
+            </p>
+          </div>
+        )}
+
+        {showVotes && (
+          <div className="w-full text-center">
+            <span className="text-sm font-medium">
+              Votes: <span className="text-primary font-bold">{candidate.votes}</span>
+            </span>
+          </div>
         )}
       </CardFooter>
     </Card>

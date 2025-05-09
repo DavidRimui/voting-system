@@ -128,7 +128,7 @@ export function generateCandidates(): Candidate[] {
       category: "2",
       description: "Social Media Influencer",
       votes: 0,
-      imageUrl: `/placeholder.svg?height=200&width=200&text=EM`,
+      imageUrl: `/images/eve-mungai.png`,
     },
     {
       id: "2-4",
@@ -136,7 +136,7 @@ export function generateCandidates(): Candidate[] {
       category: "2",
       description: "Social Media Influencer",
       votes: 0,
-      imageUrl: `/placeholder.svg?height=200&width=200&text=EA`,
+      imageUrl: `/images/esther-akoth.png`,
     },
     {
       id: "2-5",
@@ -178,7 +178,7 @@ export function generateCandidates(): Candidate[] {
       category: "3",
       description: "Governor Kwale County",
       votes: 0,
-      imageUrl: `/placeholder.svg?height=200&width=200&text=FA`,
+      imageUrl: `/images/fatuma-achani.png`,
     },
     {
       id: "3-3",
@@ -252,7 +252,7 @@ export function generateCandidates(): Candidate[] {
       category: "4",
       description: "LSK",
       votes: 0,
-      imageUrl: `/placeholder.svg?height=200&width=200&text=FO`,
+      imageUrl: `/images/faith-odhiambo.png`,
     },
     {
       id: "4-4",
@@ -310,7 +310,7 @@ export function generateCandidates(): Candidate[] {
       category: "5",
       description: "BSD Group",
       votes: 0,
-      imageUrl: `/placeholder.svg?height=200&width=200&text=EM`,
+      imageUrl: `/images/eva-muraya.png`,
     },
     {
       id: "5-6",
@@ -344,7 +344,7 @@ export function generateCandidates(): Candidate[] {
       category: "6",
       description: "Healthcare Professional",
       votes: 0,
-      imageUrl: `/placeholder.svg?height=200&width=200&text=LI`,
+      imageUrl: `/images/dr-lizzie-itotia.png`,
     },
     {
       id: "6-2",
@@ -436,7 +436,7 @@ export function generateCandidates(): Candidate[] {
       category: "8",
       description: "Youth & Innovation Leader",
       votes: 0,
-      imageUrl: `/placeholder.svg?height=200&width=200&text=EN`,
+      imageUrl: `/images/esther-ndeti.png`,
     },
     {
       id: "8-5",
@@ -606,7 +606,7 @@ export function generateCandidates(): Candidate[] {
       category: "13",
       description: "Founder of the Green Generation Initiative",
       votes: 0,
-      imageUrl: `/placeholder.svg?height=200&width=200&text=EW`,
+      imageUrl: `/images/elizabeth-wathuti.png`,
     },
 
     // 14. Sports
@@ -616,7 +616,7 @@ export function generateCandidates(): Candidate[] {
       category: "14",
       description: "Athletics",
       votes: 0,
-      imageUrl: `/placeholder.svg?height=200&width=200&text=FK`,
+      imageUrl: `/images/faith-kipyegon.png`,
     },
     {
       id: "14-2",
@@ -852,7 +852,7 @@ export function generateCandidates(): Candidate[] {
       category: "20",
       description: "Parents Africa",
       votes: 0,
-      imageUrl: `/placeholder.svg?height=200&width=200&text=EM`,
+      imageUrl: `/images/eunice-mathu.png`,
     },
     {
       id: "20-2",

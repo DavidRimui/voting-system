@@ -30,9 +30,10 @@ export function VotingPlatform() {
     setFilteredCandidates(filtered)
   }, [searchTerm, categoryFilter, candidates])
 
-  const handleVote = (candidateId: string) => {
+  const handleVote = (candidateId: string, voteCount: number) => {
     // The vote is already handled in the CandidateCard component
     // and the real-time updates will pick up the change
+    console.log(`Voted for candidate ${candidateId} with ${voteCount} votes`)
   }
 
   const getCategoryName = (categoryId: string) => {
@@ -51,6 +52,15 @@ export function VotingPlatform() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">Vote for Your Candidate</h1>
+
+      <div className="bg-muted/50 p-4 rounded-lg mb-8">
+        <h2 className="text-lg font-semibold mb-2">How Voting Works</h2>
+        <p className="text-sm text-muted-foreground">
+          Each vote costs <span className="font-medium text-primary">10 KES</span>. You can purchase multiple votes for
+          your favorite candidate. Use the + and - buttons to adjust the number of votes, and the total cost will be
+          calculated automatically.
+        </p>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <div className="relative">
