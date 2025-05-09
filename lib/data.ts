@@ -45,7 +45,7 @@ export function generateCandidates(): Candidate[] {
       name: "Lynne Ngugi",
       category: "1",
       description: "LN Media",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=LN`,
     },
     {
@@ -53,7 +53,7 @@ export function generateCandidates(): Candidate[] {
       name: "Yvonne Okwara",
       category: "1",
       description: "Media Personality",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=YO`,
     },
     {
@@ -61,7 +61,7 @@ export function generateCandidates(): Candidate[] {
       name: "Mashirima Kapombe",
       category: "1",
       description: "Media Personality",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=MK`,
     },
     {
@@ -69,7 +69,7 @@ export function generateCandidates(): Candidate[] {
       name: "Adelle Onyango",
       category: "1",
       description: "Media Personality",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/adele-onyango.png`,
     },
     {
@@ -77,7 +77,7 @@ export function generateCandidates(): Candidate[] {
       name: "Pamela Sittoni",
       category: "1",
       description: "Media Personality",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=PS`,
     },
     {
@@ -85,7 +85,7 @@ export function generateCandidates(): Candidate[] {
       name: "Zubeida Koome",
       category: "1",
       description: "Media Personality",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=ZK`,
     },
     {
@@ -93,7 +93,7 @@ export function generateCandidates(): Candidate[] {
       name: "Victoria Rubadiri",
       category: "1",
       description: "Media Personality",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=VR`,
     },
     {
@@ -101,7 +101,7 @@ export function generateCandidates(): Candidate[] {
       name: "Mwende Macharia",
       category: "1",
       description: "Media Personality",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=MM`,
     },
 
@@ -111,7 +111,7 @@ export function generateCandidates(): Candidate[] {
       name: "Ajib Gathoni",
       category: "2",
       description: "Social Media Influencer",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/ajib-gathoni.png`,
     },
     {
@@ -119,15 +119,15 @@ export function generateCandidates(): Candidate[] {
       name: "Diana Bahati",
       category: "2",
       description: "Social Media Influencer",
-      votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=DB`,
+      votes: 0,
+      imageUrl: `/images/diana-marua.png`,
     },
     {
       id: "2-3",
       name: "Eve Mungai",
       category: "2",
       description: "Social Media Influencer",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=EM`,
     },
     {
@@ -135,7 +135,7 @@ export function generateCandidates(): Candidate[] {
       name: "Esther Akoth (Akothee)",
       category: "2",
       description: "Social Media Influencer",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=EA`,
     },
     {
@@ -143,15 +143,15 @@ export function generateCandidates(): Candidate[] {
       name: "Debby Rono",
       category: "2",
       description: "Comedian and Mental Health Advocate",
-      votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=DR`,
+      votes: 0,
+      imageUrl: `/images/debby-ronoh.png`,
     },
     {
       id: "2-6",
       name: "Hanifa Farsafi",
       category: "2",
       description: "Social Media Influencer",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=HF`,
     },
     {
@@ -159,7 +159,7 @@ export function generateCandidates(): Candidate[] {
       name: "Miss Muthoni",
       category: "2",
       description: "The LinkedIn Lionness",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=MM`,
     },
 
@@ -169,7 +169,7 @@ export function generateCandidates(): Candidate[] {
       name: "Anne Waiguru",
       category: "3",
       description: "Politician",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/anne-waiguru.png`,
     },
     {
@@ -177,7 +177,7 @@ export function generateCandidates(): Candidate[] {
       name: "Fatuma Achani",
       category: "3",
       description: "Governor Kwale County",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=FA`,
     },
     {
@@ -185,7 +185,7 @@ export function generateCandidates(): Candidate[] {
       name: "Gladys Wanga",
       category: "3",
       description: "Politician",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=GW`,
     },
     {
@@ -193,7 +193,7 @@ export function generateCandidates(): Candidate[] {
       name: "Margaret Nyakango",
       category: "3",
       description: "Budget Controller: Courage",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=MN`,
     },
     {
@@ -201,7 +201,7 @@ export function generateCandidates(): Candidate[] {
       name: "Gathoni wa Muchomba",
       category: "3",
       description: "Politician",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=GM`,
     },
     {
@@ -209,7 +209,7 @@ export function generateCandidates(): Candidate[] {
       name: "Jane Njeri Maina",
       category: "3",
       description: "Politician",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=JM`,
     },
     {
@@ -217,7 +217,7 @@ export function generateCandidates(): Candidate[] {
       name: "Millie Odhiambo",
       category: "3",
       description: "Politician",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=MO`,
     },
     {
@@ -225,7 +225,7 @@ export function generateCandidates(): Candidate[] {
       name: "CJ Martha Koome",
       category: "3",
       description: "Chief Justice",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/cj-martha-koome.png`,
     },
 
@@ -235,7 +235,7 @@ export function generateCandidates(): Candidate[] {
       name: "Gloria Orwoba",
       category: "4",
       description: "Period Poverty Advocate",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=GO`,
     },
     {
@@ -243,7 +243,7 @@ export function generateCandidates(): Candidate[] {
       name: "Nerima Wako Ojiwa",
       category: "4",
       description: "Cost of living Advocate",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=NW`,
     },
     {
@@ -251,7 +251,7 @@ export function generateCandidates(): Candidate[] {
       name: "Faith Odhiambo",
       category: "4",
       description: "LSK",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=FO`,
     },
     {
@@ -259,7 +259,7 @@ export function generateCandidates(): Candidate[] {
       name: "Njeri wa Migwi",
       category: "4",
       description: "Feminist Human Rights Defender",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=NM`,
     },
     {
@@ -267,7 +267,7 @@ export function generateCandidates(): Candidate[] {
       name: "Mercy Odondo",
       category: "4",
       description: "SRHR/SGBV Advocate",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=MO`,
     },
 
@@ -277,7 +277,7 @@ export function generateCandidates(): Candidate[] {
       name: "Jane Karuku",
       category: "5",
       description: "CEO EABL",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=JK`,
     },
     {
@@ -285,7 +285,7 @@ export function generateCandidates(): Candidate[] {
       name: "Rita Kavashe",
       category: "5",
       description: "Isuzu",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=RK`,
     },
     {
@@ -293,7 +293,7 @@ export function generateCandidates(): Candidate[] {
       name: "Laila Macharia",
       category: "5",
       description: "CENTUM",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=LM`,
     },
     {
@@ -301,15 +301,15 @@ export function generateCandidates(): Candidate[] {
       name: "Dorothy Ghettuba Pala",
       category: "5",
       description: "Netflix Manager International Originals",
-      votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=DG`,
+      votes: 0,
+      imageUrl: `/images/dorothy-ghettuba.png`,
     },
     {
       id: "5-5",
       name: "Eva Muraya",
       category: "5",
       description: "BSD Group",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=EM`,
     },
     {
@@ -317,7 +317,7 @@ export function generateCandidates(): Candidate[] {
       name: "Mary Mulili",
       category: "5",
       description: "UBA Kenya Designate Managing Director and CEO",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=MM`,
     },
     {
@@ -325,7 +325,7 @@ export function generateCandidates(): Candidate[] {
       name: "Joan the Career Coach",
       category: "5",
       description: "Career Coach",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=JC`,
     },
     {
@@ -333,7 +333,7 @@ export function generateCandidates(): Candidate[] {
       name: "Lucia Musau",
       category: "5",
       description: "Corporate Leader",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=LM`,
     },
 
@@ -343,7 +343,7 @@ export function generateCandidates(): Candidate[] {
       name: "Dr. Lizzie Itotia",
       category: "6",
       description: "Healthcare Professional",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=LI`,
     },
     {
@@ -351,7 +351,7 @@ export function generateCandidates(): Candidate[] {
       name: "Anna Qabale Duba",
       category: "6",
       description: "Global Nursing Award",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/anne-qabale-duba.png`,
     },
     {
@@ -359,7 +359,7 @@ export function generateCandidates(): Candidate[] {
       name: "Stella Wairimu Bosire",
       category: "6",
       description: "CEO Kenya Medical Association",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=SW`,
     },
 
@@ -369,7 +369,7 @@ export function generateCandidates(): Candidate[] {
       name: "Mumbi Ndung'u",
       category: "7",
       description: "Executive Director Power Learn Project",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=MN`,
     },
     {
@@ -377,7 +377,7 @@ export function generateCandidates(): Candidate[] {
       name: "Prof. Nancy Booker",
       category: "7",
       description: "Education Professional",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=NB`,
     },
     {
@@ -385,7 +385,7 @@ export function generateCandidates(): Candidate[] {
       name: "Rosalia Mkanjala",
       category: "7",
       description: "KNUT",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=RM`,
     },
     {
@@ -393,7 +393,7 @@ export function generateCandidates(): Candidate[] {
       name: "Wawira Njiru",
       category: "7",
       description: "Food for education",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=WN`,
     },
     {
@@ -401,7 +401,7 @@ export function generateCandidates(): Candidate[] {
       name: "Nelly Cheboi",
       category: "7",
       description: "CNN Person of the Year",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=NC`,
     },
 
@@ -411,7 +411,7 @@ export function generateCandidates(): Candidate[] {
       name: "Caren Wakoli",
       category: "8",
       description: "Founder and Executive Director of Emerging Leaders",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/caren-wakoli.png`,
     },
     {
@@ -419,7 +419,7 @@ export function generateCandidates(): Candidate[] {
       name: "Nancy Maina",
       category: "8",
       description: "Founder Lugha Ishara",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=NM`,
     },
     {
@@ -427,7 +427,7 @@ export function generateCandidates(): Candidate[] {
       name: "Angela Oduor Lungati",
       category: "8",
       description: "Youth & Innovation Leader",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/angela-oduor-langat.png`,
     },
     {
@@ -435,7 +435,7 @@ export function generateCandidates(): Candidate[] {
       name: "Esther Ndeti",
       category: "8",
       description: "Youth & Innovation Leader",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=EN`,
     },
     {
@@ -443,7 +443,7 @@ export function generateCandidates(): Candidate[] {
       name: "Beth Koigi",
       category: "8",
       description: "Majik Water",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/beth-koigi.png`,
     },
     {
@@ -451,7 +451,7 @@ export function generateCandidates(): Candidate[] {
       name: "Sheryl Mboya",
       category: "8",
       description: "Edible Plate",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=SM`,
     },
 
@@ -461,7 +461,7 @@ export function generateCandidates(): Candidate[] {
       name: "Anne Ireri",
       category: "9",
       description: "CEO of FIDA",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/anne-ireri.png`,
     },
     {
@@ -469,15 +469,15 @@ export function generateCandidates(): Candidate[] {
       name: "Dorcas Gachagua",
       category: "9",
       description: "Mama Boys: Second Lady",
-      votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=DG`,
+      votes: 0,
+      imageUrl: `/images/dorcas-rigathi.png`,
     },
     {
       id: "9-3",
       name: "PS Wangombe",
       category: "9",
       description: "Gender Equality Advocate",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=PW`,
     },
 
@@ -487,15 +487,15 @@ export function generateCandidates(): Candidate[] {
       name: "Dr. Joyce Gikunda",
       category: "10",
       description: "Linton's Beauty",
-      votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=JG`,
+      votes: 0,
+      imageUrl: `/images/dr-joyce-gikunda.png`,
     },
     {
       id: "10-2",
       name: "Mary Muthoni Jason",
       category: "10",
       description: "Women in Business (WIB) Kenya CEO, PS Prisons and Correctional Services",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=MM`,
     },
     {
@@ -503,7 +503,7 @@ export function generateCandidates(): Candidate[] {
       name: "Ann Mathu",
       category: "10",
       description: "NACADA",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/ann-mathu.png`,
     },
     {
@@ -511,7 +511,7 @@ export function generateCandidates(): Candidate[] {
       name: "Dr Susan Onyancha",
       category: "10",
       description: "BF Suma",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=SO`,
     },
     {
@@ -519,7 +519,7 @@ export function generateCandidates(): Candidate[] {
       name: "Just Ivy Africa",
       category: "10",
       description: "Business Leader",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=JI`,
     },
 
@@ -529,7 +529,7 @@ export function generateCandidates(): Candidate[] {
       name: "Flora Mutahi",
       category: "11",
       description: "Association of Manufacturing",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=FM`,
     },
     {
@@ -537,7 +537,7 @@ export function generateCandidates(): Candidate[] {
       name: "Caroline Kariuki",
       category: "11",
       description: "KEPSA",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/caroline-kariuki.png`,
     },
     {
@@ -545,7 +545,7 @@ export function generateCandidates(): Candidate[] {
       name: "Mary Ngechu",
       category: "11",
       description: "Founder Plast Packaging Industries Limited",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=MN`,
     },
 
@@ -555,7 +555,7 @@ export function generateCandidates(): Candidate[] {
       name: "Sarah Kabu",
       category: "12",
       description: "Bonfire",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=SK`,
     },
     {
@@ -563,7 +563,7 @@ export function generateCandidates(): Candidate[] {
       name: "Captain Ruth Karauri",
       category: "12",
       description: "Hospitality & Tourism Professional",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/captain-ruth-karauri.png`,
     },
     {
@@ -571,8 +571,8 @@ export function generateCandidates(): Candidate[] {
       name: "Dr. Betty Adero Radier",
       category: "12",
       description: "Kenya Tourism Board CEO",
-      votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=BR`,
+      votes: 0,
+      imageUrl: `/images/dr-betty-adero.png`,
     },
 
     // 13. Agriculture & Climate Change
@@ -581,7 +581,7 @@ export function generateCandidates(): Candidate[] {
       name: "Jamila Abbas",
       category: "13",
       description: "Poptech 2012",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=JA`,
     },
     {
@@ -589,23 +589,23 @@ export function generateCandidates(): Candidate[] {
       name: "Judy Matu",
       category: "13",
       description: "Association of Women in Agriculture (AWAK)",
-      votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=JM`,
+      votes: 0,
+      imageUrl: `/images/dr-judy-matu.png`,
     },
     {
       id: "13-3",
       name: "Daphne Muchai",
       category: "13",
       description: "Executive Director - Women Farmers Association of Kenya- WoFaAK",
-      votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=DM`,
+      votes: 0,
+      imageUrl: `/images/daphine-muchai.png`,
     },
     {
       id: "13-4",
       name: "Elizabeth Wanjiru Wathuti",
       category: "13",
       description: "Founder of the Green Generation Initiative",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=EW`,
     },
 
@@ -615,7 +615,7 @@ export function generateCandidates(): Candidate[] {
       name: "Faith Kipyegon",
       category: "14",
       description: "Athletics",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=FK`,
     },
     {
@@ -623,7 +623,7 @@ export function generateCandidates(): Candidate[] {
       name: "Angela Okutoyi",
       category: "14",
       description: "Tennis",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/angela-otukoyi.png`,
     },
     {
@@ -631,7 +631,7 @@ export function generateCandidates(): Candidate[] {
       name: "Mwanalima Adam Jereko",
       category: "14",
       description: "Football: Harambee Starlets",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=MA`,
     },
     {
@@ -639,7 +639,7 @@ export function generateCandidates(): Candidate[] {
       name: "Alexandra Ndolo",
       category: "14",
       description: "Fencing",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/alexandra-ndolo.png`,
     },
     {
@@ -647,7 +647,7 @@ export function generateCandidates(): Candidate[] {
       name: "Paula Munyi",
       category: "14",
       description: "Sharpshooter",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=PM`,
     },
     {
@@ -655,7 +655,7 @@ export function generateCandidates(): Candidate[] {
       name: "Janet Wanja",
       category: "14",
       description: "Volleyball",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=JW`,
     },
     {
@@ -663,7 +663,7 @@ export function generateCandidates(): Candidate[] {
       name: "Slyvia Gathoni",
       category: "14",
       description: "E-Games: Arrow Queen",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=SG`,
     },
     {
@@ -671,7 +671,7 @@ export function generateCandidates(): Candidate[] {
       name: "Lorna Abiero",
       category: "14",
       description: "Martial Arts",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=LA`,
     },
 
@@ -681,15 +681,15 @@ export function generateCandidates(): Candidate[] {
       name: "Dr. Chao Mbogho",
       category: "15",
       description: "Tech and Entrepreneurship Leader",
-      votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=CM`,
+      votes: 0,
+      imageUrl: `/images/dr-chao-mbogho.png`,
     },
     {
       id: "15-2",
       name: "Susan Odhiambo",
       category: "15",
       description: "Tech leadership Group head, Digital transformation Equity Bank",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=SO`,
     },
     {
@@ -697,15 +697,15 @@ export function generateCandidates(): Candidate[] {
       name: "Dorothy Ooko",
       category: "15",
       description: "Google Head Of Communications & Public Affairs, Africa",
-      votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=DO`,
+      votes: 0,
+      imageUrl: `/images/dorothy-ooko.png`,
     },
     {
       id: "15-4",
       name: "Janet C. Kemboi",
       category: "15",
       description: "Communications Manager, Eastern Africa · Meta",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=JK`,
     },
 
@@ -715,7 +715,7 @@ export function generateCandidates(): Candidate[] {
       name: "Leah Wambui",
       category: "16",
       description: "Cherriez Property",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=LW`,
     },
     {
@@ -723,7 +723,7 @@ export function generateCandidates(): Candidate[] {
       name: "Liz Njuguna",
       category: "16",
       description: "Risiih Investments",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=LN`,
     },
     {
@@ -731,7 +731,7 @@ export function generateCandidates(): Candidate[] {
       name: "Robyn Emerson",
       category: "16",
       description: "Women in Real Estate President",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=RE`,
     },
 
@@ -741,7 +741,7 @@ export function generateCandidates(): Candidate[] {
       name: "Crystal Asige",
       category: "17",
       description: "Disability Rights Advocate",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/crystal-asige.png`,
     },
     {
@@ -749,7 +749,7 @@ export function generateCandidates(): Candidate[] {
       name: "Naisula Lesuuda",
       category: "17",
       description: "Minority Rights Advocate",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=NL`,
     },
     {
@@ -757,7 +757,7 @@ export function generateCandidates(): Candidate[] {
       name: "Wanja Maina",
       category: "17",
       description: "Disability Rights Advocate",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=WM`,
     },
 
@@ -767,7 +767,7 @@ export function generateCandidates(): Candidate[] {
       name: "Nikita Kering",
       category: "18",
       description: "Entertainment & Creative Arts Professional",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=NK`,
     },
     {
@@ -775,7 +775,7 @@ export function generateCandidates(): Candidate[] {
       name: "Jacky Vike",
       category: "18",
       description: "Entertainment & Creative Arts Professional",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=JV`,
     },
     {
@@ -783,7 +783,7 @@ export function generateCandidates(): Candidate[] {
       name: "Nadia Mukami",
       category: "18",
       description: "Entertainment & Creative Arts Professional",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=NM`,
     },
     {
@@ -791,7 +791,7 @@ export function generateCandidates(): Candidate[] {
       name: "Catherine Kamau",
       category: "18",
       description: "Actress",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/catherine-kamau.png`,
     },
     {
@@ -799,7 +799,7 @@ export function generateCandidates(): Candidate[] {
       name: "Angela Ndambuki",
       category: "18",
       description: "Entertainment & Creative Arts Professional",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/images/angela-ndambuki.png`,
     },
     {
@@ -807,7 +807,7 @@ export function generateCandidates(): Candidate[] {
       name: "Sofiya Nzau",
       category: "18",
       description: "Mwaki song",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=SN`,
     },
     {
@@ -815,7 +815,7 @@ export function generateCandidates(): Candidate[] {
       name: "Wixx Mangutha",
       category: "18",
       description: "Entertainment & Creative Arts Professional",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=WM`,
     },
 
@@ -825,7 +825,7 @@ export function generateCandidates(): Candidate[] {
       name: "Lupita Nyong'o",
       category: "19",
       description: "Actress",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=LN`,
     },
     {
@@ -833,7 +833,7 @@ export function generateCandidates(): Candidate[] {
       name: "Lilian Seenoi-Barr",
       category: "19",
       description: "Council Woman in Northern Ireland",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=LS`,
     },
     {
@@ -841,7 +841,7 @@ export function generateCandidates(): Candidate[] {
       name: "Winfred Yavi",
       category: "19",
       description: "Bahrain Athlete",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=WY`,
     },
 
@@ -851,7 +851,7 @@ export function generateCandidates(): Candidate[] {
       name: "Eunice Mathu",
       category: "20",
       description: "Parents Africa",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=EM`,
     },
     {
@@ -859,7 +859,7 @@ export function generateCandidates(): Candidate[] {
       name: "Dr. Ida Odinga",
       category: "20",
       description: "Lifetime Achievement",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=IO`,
     },
     {
@@ -867,7 +867,7 @@ export function generateCandidates(): Candidate[] {
       name: "Hon. Martha Karua",
       category: "20",
       description: "Lifetime Achievement",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=MK`,
     },
     {
@@ -875,7 +875,7 @@ export function generateCandidates(): Candidate[] {
       name: "Prof. Eddah Gachukia",
       category: "20",
       description: "Riara Group of Schools",
-      votes: Math.floor(Math.random() * 100),
+      votes: 0,
       imageUrl: `/placeholder.svg?height=200&width=200&text=EG`,
     },
   ]
