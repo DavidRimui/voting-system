@@ -63,13 +63,14 @@ export function CandidateCard({ candidate, showVotes = false, onVote, categoryNa
         </div>
       </CardHeader>
       <CardContent className="flex-grow text-center">
-        {showVotes && (
-          <p className="text-sm">
-            Current votes: <span className="font-semibold text-primary">{candidate.votes}</span>
-          </p>
-        )}
+        <p className="text-sm text-muted-foreground">{candidate.description}</p>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="flex flex-col gap-2">
+        <div className="w-full text-center mb-1">
+          <span className="text-sm font-medium">
+            Votes: <span className="text-primary font-bold">{candidate.votes}</span>
+          </span>
+        </div>
         {!showVotes && (
           <Button className="w-full" onClick={handleVote} disabled={isVoting || hasVoted}>
             {isVoting ? (

@@ -170,7 +170,7 @@ export function generateCandidates(): Candidate[] {
       category: "3",
       description: "Politician",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=AW`,
+      imageUrl: `/images/anne-waiguru.png`,
     },
     {
       id: "3-2",
@@ -226,7 +226,7 @@ export function generateCandidates(): Candidate[] {
       category: "3",
       description: "Chief Justice",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=MK`,
+      imageUrl: `/images/cj-martha-koome.png`,
     },
 
     // 4. Human Rights & Social Justice
@@ -412,7 +412,7 @@ export function generateCandidates(): Candidate[] {
       category: "8",
       description: "Founder and Executive Director of Emerging Leaders",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=CW`,
+      imageUrl: `/images/caren-wakoli.png`,
     },
     {
       id: "8-2",
@@ -444,7 +444,7 @@ export function generateCandidates(): Candidate[] {
       category: "8",
       description: "Majik Water",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=BK`,
+      imageUrl: `/images/beth-koigi.png`,
     },
     {
       id: "8-6",
@@ -538,7 +538,7 @@ export function generateCandidates(): Candidate[] {
       category: "11",
       description: "KEPSA",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=CK`,
+      imageUrl: `/images/caroline-kariuki.png`,
     },
     {
       id: "11-3",
@@ -564,7 +564,7 @@ export function generateCandidates(): Candidate[] {
       category: "12",
       description: "Hospitality & Tourism Professional",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=RK`,
+      imageUrl: `/images/captain-ruth-karauri.png`,
     },
     {
       id: "12-3",
@@ -742,7 +742,7 @@ export function generateCandidates(): Candidate[] {
       category: "17",
       description: "Disability Rights Advocate",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=CA`,
+      imageUrl: `/images/crystal-asige.png`,
     },
     {
       id: "17-2",
@@ -792,7 +792,7 @@ export function generateCandidates(): Candidate[] {
       category: "18",
       description: "Actress",
       votes: Math.floor(Math.random() * 100),
-      imageUrl: `/placeholder.svg?height=200&width=200&text=CK`,
+      imageUrl: `/images/catherine-kamau.png`,
     },
     {
       id: "18-5",
